@@ -88,3 +88,13 @@ document.addEventListener("DOMContentLoaded", () => {
         totalAmount.textContent = total.toFixed(2);
     }
 });
+
+
+
+const currencySelect = document.getElementById('currency');
+const currencySymbolSpan = document.getElementById('currency-symbol');
+
+// update symbol in Total
+currencySelect.addEventListener('change', () => {
+    currencySymbolSpan.textContent = currencySelect.value;
+});

@@ -10,8 +10,16 @@
 <body>
     <div class="container">
         <h1>Expense Tracker</h1>
+     
+
         <form id="expense-form">
             <input type="text" id="expense-name" placeholder="Expense Name" required />
+            <select id="currency">
+  <option value="₹">₹</option>
+  <option value="$">$</option>
+  <option value="€">€</option>
+</select>
+
             <input type="number" id="expense-amount" placeholder="Amount" required />
             <select id="expense-category" required>
                 <option value="" disabled selected>Select Category</option>
@@ -36,9 +44,12 @@
                 </thead>
                 <tbody id="expense-list"></tbody>
             </table>
-            <div class="total-amount">
-                <strong>Total:</strong> $<span id="total-amount">0</span>
-            </div>
+         
+    <div class="total-amount">
+    <strong>Total:</strong> <span id="currency-symbol">₹</span><span id="total-amount">0</span>
+</div>
+
+
         </div>
         <div class="filter">
             <label for="filter-category">Filter by Category:</label>
